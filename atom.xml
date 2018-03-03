@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-28T13:16:25.480Z</updated>
+  <updated>2018-03-03T10:31:10.833Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,19 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World(test)</title>
-    <link href="http://yoursite.com/2018/02/28/Hello-World/"/>
-    <id>http://yoursite.com/2018/02/28/Hello-World/</id>
-    <published>2018-02-28T12:52:47.000Z</published>
-    <updated>2018-02-28T13:16:25.480Z</updated>
+    <title>Test Picture</title>
+    <link href="http://yoursite.com/2018/03/03/Test-Picture/"/>
+    <id>http://yoursite.com/2018/03/03/Test-Picture/</id>
+    <published>2018-03-03T10:25:29.000Z</published>
+    <updated>2018-03-03T10:31:10.833Z</updated>
     
-    <content type="html"><![CDATA[<p>#Hello World<br>It’s first writting artical that use <strong>Typora</strong>for markdown in my blog. Just in order to test picture url.</p><ul><li>TEST<br><img src="G:\Blog\chenleiming225.github.io\source\_posts\大数据展示.jpg" alt="大数据展示"></li><li>中文测试</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h1><p>Test picture display in Blog</p><p><img src="/2018/03/03/Test-Picture/Test Picture/big data.jpg" alt="Big Data"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;#Hello World&lt;br&gt;It’s first writting artical that use &lt;strong&gt;Typora&lt;/strong&gt;for markdown in my blog. Just in order to test picture url.&lt;/
+        &lt;h1 id=&quot;TEST&quot;&gt;&lt;a href=&quot;#TEST&quot; class=&quot;headerlink&quot; title=&quot;TEST&quot;&gt;&lt;/a&gt;TEST&lt;/h1&gt;&lt;p&gt;Test picture display in Blog&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/03/03/Test
+      
+    
+    </summary>
+    
+    
+      <category term="Test" scheme="http://yoursite.com/tags/Test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World(test)</title>
+    <link href="http://yoursite.com/2018/02/28/Hello-World/"/>
+    <id>http://yoursite.com/2018/02/28/Hello-World/</id>
+    <published>2018-02-28T12:52:47.000Z</published>
+    <updated>2018-03-03T09:43:13.180Z</updated>
+    
+    <content type="html"><![CDATA[<p>#Hello World<br>It’s first writting artical that use <strong>Typora</strong> for markdown in my blog. Just in order to test picture url.</p><ul><li><p>TEST<br><img src="/2018/02/28/Hello-World/G:/Blog\chenleiming225.github.io\source\_posts\big data.jpg" alt="big data"></p></li><li><p>中文测试</p><p><img src="/2018/02/28/Hello-World/G:/Blog\chenleiming225.github.io\source\img\big data.jpg" alt="big data"></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#Hello World&lt;br&gt;It’s first writting artical that use &lt;strong&gt;Typora&lt;/strong&gt; for markdown in my blog. Just in order to test picture url.&lt;
       
     
     </summary>
