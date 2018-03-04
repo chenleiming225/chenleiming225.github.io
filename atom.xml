@@ -45,7 +45,7 @@
     <link href="http://yoursite.com/2018/02/28/Hello-World/"/>
     <id>http://yoursite.com/2018/02/28/Hello-World/</id>
     <published>2018-02-28T12:52:47.000Z</published>
-    <updated>2018-03-03T09:43:13.180Z</updated>
+    <updated>2018-03-04T02:28:32.550Z</updated>
     
     <content type="html"><![CDATA[<p>#Hello World<br>It’s first writting artical that use <strong>Typora</strong> for markdown in my blog. Just in order to test picture url.</p><ul><li><p>TEST<br><img src="/2018/02/28/Hello-World/G:/Blog\chenleiming225.github.io\source\_posts\big data.jpg" alt="big data"></p></li><li><p>中文测试</p><p><img src="/2018/02/28/Hello-World/G:/Blog\chenleiming225.github.io\source\img\big data.jpg" alt="big data"></p></li></ul>]]></content>
     
