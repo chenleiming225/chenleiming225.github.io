@@ -33,6 +33,14 @@
         }
     </style>
     
+    <script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
+    <script>
+      AV.init({
+        appId: 'XR9gFeTtsA4IT1OyIby86eh3-gzGzoHsz',
+        appKey: '68HXtpKRlLIbMRViUnFEOQgW'
+      })
+    </script>
+    
     <!--<script type="text/javascript">
       if (document.images) {
         var avatar = new Image();
@@ -134,6 +142,10 @@
                         
                         
                         <li>
+                            <a href="/categories/ArcGIS/">ArcGIS</a>
+                        </li>
+                        
+                        <li>
                             <a href="/categories/测试/">测试</a>
                         </li>
                         
@@ -160,7 +172,7 @@
                         
                         
                         <li>
-                            <a href="/tags/Test/">Test</a>
+                            <a href="/tags/空间分析/">空间分析</a>
                         </li>
                         
                         <li>
@@ -168,9 +180,13 @@
                         </li>
                         
                         <li>
-                            <a href="/tags/test/">test</a>
+                            <a href="/tags/Test/">Test</a>
                         </li>
                         
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
                         
                         
                     </ul>
@@ -227,6 +243,10 @@
         <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
             
              
+             
+                        <a href="/2018/03/03/ArcGIS10.5 空间分析/">Test Picture</a>
+                        <br>
+            
              
                         <a href="/2018/03/03/Test-Picture/">Test Picture</a>
                         <br>
@@ -287,6 +307,18 @@
     
     <!-- 要配置好leancloud才能开启此小工具 -->
     
+    <aside id="sidebar-hot_posts">
+    <div class="panel panel-gal hot hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-fire"></i>
+            最热文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
     
     <aside id="sidebar-recent_posts">
     <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
@@ -297,6 +329,12 @@
             <i class="fa fa-chevron-circle-up panel-toggle"></i>
         </div>
         <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/03/03/ArcGIS10.5 空间分析/">Test Picture</a>
+                </span>
+            </li>
             
             <li class="list-group-item">
                 <span class="post-title">
@@ -334,13 +372,19 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/03/03/Test-Picture/">Test Picture</a>
+                    <a href="/2018/03/03/ArcGIS10.5 空间分析/">Test Picture</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2018/02/28/Hello-World/">Hello World(test)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/03/03/Test-Picture/">Test Picture</a>
                 </span>
             </li>
             
@@ -371,11 +415,13 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/Test/" style="font-size: 17.070370962716456px;" class="tag-cloud-link">Test</a>
+    <a href="/tags/空间分析/" style="font-size: 9.600026385747517px;" class="tag-cloud-link">空间分析</a>
     
-    <a href="/tags/other/" style="font-size: 15.270515231747806px;" class="tag-cloud-link">other</a>
+    <a href="/tags/other/" style="font-size: 16.743845476455796px;" class="tag-cloud-link">other</a>
     
-    <a href="/tags/test/" style="font-size: 17.568425266923434px;" class="tag-cloud-link">test</a>
+    <a href="/tags/Test/" style="font-size: 13.290968013096327px;" class="tag-cloud-link">Test</a>
+    
+    <a href="/tags/test/" style="font-size: 19.306805245511317px;" class="tag-cloud-link">test</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -484,5 +530,31 @@
 <script src="/js/oni.js"></script>
 
 
+<script>
+    window.hot_posts_count = '10'
+    // window.use_leancloud = 'true'
+</script>
+<script src="/js/comment/leancloud.js"></script>
+
+
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.owner = 'https://chenleiming225.github.com'
+      window.commentConfig.repo = 'storecomment.github.io'
+      window.commentConfig.client_id = '409e267fc5792b05b8d6'
+      window.commentConfig.client_secret = 'e83c91c0d06558c1e0469150f9182994c42fa74a'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+        owner: 'https://chenleiming225.github.com',
+        repo: 'storecomment.github.io',
+        client_id: '409e267fc5792b05b8d6',
+        client_secret: 'e83c91c0d06558c1e0469150f9182994c42fa74a',
+        redirect_uri: ''
+      }
+    }
+</script>
+<script src="/js/comment/gitment.js"></script>
 
 </html>
