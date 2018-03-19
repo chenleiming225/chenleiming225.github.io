@@ -176,11 +176,11 @@
                         </li>
                         
                         <li>
-                            <a href="/tags/Test/">Test</a>
+                            <a href="/tags/other/">other</a>
                         </li>
                         
                         <li>
-                            <a href="/tags/other/">other</a>
+                            <a href="/tags/Test/">Test</a>
                         </li>
                         
                         
@@ -269,7 +269,80 @@
         </center>
     </div>
     <div class="content-article">
-        <h1 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h1><h1 id="矢量数据转换为栅格数据"><a href="#矢量数据转换为栅格数据" class="headerlink" title="矢量数据转换为栅格数据"></a>矢量数据转换为栅格数据</h1>
+        <p><strong>预备知识：</strong></p>
+<p><strong>空间数据及其表达</strong></p>
+<p>空间数据（也称地理数据）是地理信息系统的一个主要组成部分。空间数据是指以地球表面空间位置为参照的自然、社会和人文经济景观数据，可以是图形、图像、文字、表格和数字等。它是GIS所表达的现实世界经过模型抽象后的内容，一般通过扫描仪、键盘、光盘或其它通讯系统输入GIS。</p>
+<p>在某一尺度下，可以用点、线、面、体来表示各类地理空间要素。</p>
+<p>有两种基本方法来表示空间数据：一是栅格表达; 一是矢量表达。两种数据格式间可以进行转换。</p>
+<p><strong>空间分析</strong></p>
+<p>空间分析是基于地理对象的位置和形态的空间数据的分析技术，其目的在于提取空间信息或者从现有的数据派生出新的数据，是将空间数据转变为信息的过程。</p>
+<p>空间分析是地理信息系统的主要特征。空间分析能力（特别是对空间隐含信息的提取和传输能力）是地理信息系统区别与一般信息系统的主要方面，也是评价一个地理信息系统的主要指标。</p>
+<p>空间分析赖以进行的基础是地理空间数据库。</p>
+<p>空间分析运用的手段包括各种几何的逻辑运算、数理统计分析，代数运算等数学手段<strong>。</strong></p>
+<p>空间分析可以基于矢量数据或栅格数据进行，具体是情况要根据实际需要确定。</p>
+<p><strong>空间分析步骤</strong></p>
+<p>根据要进行的空间分析类型的不同，空间分析的步骤会有所不同。通常，所有的空间分析都涉及以下的基本步骤，具体在某个分析中，可以作相应的变化。</p>
+<p>空间分析的基本步骤: </p>
+<p>a)      确定问题并建立分析的目标和要满足的条件</p>
+<p>b)      针对空间问题选择合适的分析工具</p>
+<p>c)       准备空间操作中要用到的数据。 </p>
+<p>d)      定制一个分析计划然后执行分析操作。</p>
+<p>e)      显示并评价分析结果</p>
+<p><a href=""><strong>1.</strong> </a><strong>了解栅格数据</strong></p>
+<p>在ArcMap中，新建一个地图文档，加载栅格数据：Slope1，此时，没有投影信息。在ArcToolbox中选取<strong>Data Management Tools&gt; Projections and Transformatios &gt; Define Projection </strong>.</p>
+<p>选中待投影数据<strong> Slope1</strong> ，投影坐标系选择 <strong>CGCS2000_3_Degree_GK_CM_102E</strong> 。</p>
+<p><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg" alt="img"></p>
+<p>在TOC 中双击图层Slope1， 查看图层属性<strong>layer properties&gt; 数据源Source</strong> </p>
+<p><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg" alt="img"></p>
+<p>在图层属性对话框中，点击“数据源”选项，可以查看此栅格图层的相关属性及统计信息。</p>
+<p><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image006.jpg" alt="img"></p>
+<p>新建ArcMap地图文档：加载离散栅格数据：Landuse，在TOC中右键点击<strong>Landuse </strong>，“打开属性表<strong>Open Attribute Table</strong>”</p>
+<p><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image007.png" alt="img"></p>
+<p>查看字<strong>Count</strong>可以看到每种地类所占栅格单元的数目</p>
+<p><a href=""><strong>2.</strong></a><strong>用任意多边形剪切栅格数据**</strong>(<strong><strong>矢量数据转换为栅格数据</strong></strong>)**</p>
+<p>在ArcCatalog下新建一个要素类（要素类型为:多边形），命名为：ClipPoly.shp</p>
+<p>在ArcMap中，加载栅格数据：Landuse、和ClipPoly.shp</p>
+<p><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image009.jpg" alt="img">  </p>
+<p>打开 编辑器工具栏，开始编辑 ClipPoly ，根据要剪切的区域，绘制一个任意形状的多边形。打开属性表，修改多边形的字段<strong>“ID”</strong>的值为1，保存修改，停止编辑。</p>
+<p>执行命令：<spatialanalyst>－<feature to="" raster=""></feature></spatialanalyst></p>
+<table>
+<thead>
+<tr>
+<th><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image011.jpg" alt="img"></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>指定栅格大小：查询要剪切的栅格图层Landuse的栅格大小，这里指定为25</p>
+<p>指定输出栅格的名称为路径 </p>
+<p>执行命令: <spatial>-<rastercalculator></rastercalculator></spatial></p>
+<p>构造表达式：[landuse]*[clipraster]，执行 栅格图层：<strong>Landuse</strong> 和 用以剪切的栅格<strong>clipraster</strong>之间的相乘运算</p>
+<p><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image013.jpg" alt="img"></p>
+<p>得到的结果即是以任意多边形剪切的landuse数据</p>
+<p><a href=""><strong>3.</strong></a><strong>栅格重分类**</strong>(Raster Reclassify)**</p>
+<p><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image015.jpg" alt="img"></p>
+<p><strong>通过栅格重分类操作可以将连续栅格数据转换为离散栅格数据</strong></p>
+<p>在ArcMap中，新建地图文档，加载栅格数据Slope1，打开<strong>“Spatial Analyst Tools”</strong>工具栏，执行菜单命令<strong>“reclassify”</strong></p>
+<p><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image017.jpg" alt="img"></p>
+<p><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image019.jpg" alt="img"></p>
+<p>将坡度栅格重新分为5类：0 – 8 、8 – 15 、15 – 25 、25 – 35、 35 度以上。</p>
+<p><a href=""><strong>4.</strong></a><strong>缓冲区分析**</strong>(Buffer)**</p>
+<p>l  <strong>创建街道的线状缓冲区</strong></p>
+<p>新建地图文档，加载街道图层AIOStreets和城市地籍图层：AIOZonecov （地图单位为：米）</p>
+<p>执行菜单命令：<strong><selection>－<selection by="" attributes=""></selection></selection></strong></p>
+<p><img src="https://arcgis-1256178645.cos.ap-beijing.myqcloud.com/%E5%AE%9A%E4%B9%89%E6%8A%95%E5%BD%B1.png" alt="img"></p>
+<p><img src="https://arcgis-1256178645.cos.ap-beijing.myqcloud.com/%E5%9B%BE%E5%B1%82%E5%B1%9E%E6%80%A7.png" alt="img"></p>
+<p>构造表达式：<strong>[STR_NAME]=’CYPRESS’</strong> ，从图层AIOStrees中，选择街道名称为CYPRESS的街道</p>
+<p>执行“工具”菜单中的“缓冲区向导”命令，或点击“缓冲区向导”图标，打开缓冲区向导对话框：</p>
+<p>![img]    <a href="https://arcgis-1256178645.cos.ap-beijing.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA.png" target="_blank" rel="noopener">https://arcgis-1256178645.cos.ap-beijing.myqcloud.com/%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA.png</a> )<br><img src="https://arcgis-1256178645.cos.ap-beijing.myqcloud.com/%E5%B1%9E%E6%80%A7%E8%A1%A8.png" alt="img"></p>
+<p>通过缓冲区向导，建立所选择街道的50米缓冲区（一个多边形图层）</p>
+<p>得到沿街道“CYPRESS”的50米缓冲区</p>
+
     </div>
 </article>
 
@@ -398,13 +471,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/03/03/Test-Picture/">Test Picture</a>
+                    <a href="/2018/02/28/Hello-World/">Hello World(test)</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/02/28/Hello-World/">Hello World(test)</a>
+                    <a href="/2018/03/03/Test-Picture/">Test Picture</a>
                 </span>
             </li>
             
@@ -435,13 +508,13 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/空间分析/" style="font-size: 16.89676107498353px;" class="tag-cloud-link">空间分析</a>
+    <a href="/tags/空间分析/" style="font-size: 8.509890217346992px;" class="tag-cloud-link">空间分析</a>
     
-    <a href="/tags/Test/" style="font-size: 16.155048631282483px;" class="tag-cloud-link">Test</a>
+    <a href="/tags/other/" style="font-size: 16.947512394807827px;" class="tag-cloud-link">other</a>
     
-    <a href="/tags/other/" style="font-size: 11.943497609976582px;" class="tag-cloud-link">other</a>
+    <a href="/tags/Test/" style="font-size: 16.568855980334423px;" class="tag-cloud-link">Test</a>
     
-    <a href="/tags/test/" style="font-size: 11.442619747099144px;" class="tag-cloud-link">test</a>
+    <a href="/tags/test/" style="font-size: 10.747011601447312px;" class="tag-cloud-link">test</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
